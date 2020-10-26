@@ -27,7 +27,7 @@ class TodoListPage extends StatefulWidget{
 }
 
 class _TodoListPage extends State {
-  List<String> todoList = [];
+  List<String> SucheduleList = [];
 
   @override
   Widget build(BuildContext context) {
@@ -36,11 +36,11 @@ class _TodoListPage extends State {
         title: Text("リスト一覧"),
       ),
       body: ListView.builder(
-        itemCount: todoList.length,
+        itemCount: SucheduleList.length,
         itemBuilder: (context, index) {
           return Card(
             child: ListTile(
-              title: Text(todoList[index]),
+              title: Text(SucheduleList[index]),
             ),
           );
         },
@@ -53,7 +53,7 @@ class _TodoListPage extends State {
           );
           if (newText != null){
             setState(() {
-              todoList.add(newText);
+              SucheduleList.add(newText);
             });
           }
           },
